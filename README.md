@@ -37,3 +37,7 @@ sass/
 |- queries.scss
 
 styles.scss              # Main Sass file
+
+
+
+git clone https://github.com/avigaildavid/wpShell.git ~/.grunt-init/wpShell
