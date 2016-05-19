@@ -1,0 +1,11 @@
+body {
+ -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+} 

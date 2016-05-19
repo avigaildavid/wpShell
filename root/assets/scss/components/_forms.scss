@@ -1,0 +1,110 @@
+
+input {
+    display: block;
+    width: 100%;
+    padding: 12px 10px 9px;
+    font-size: 14px;
+    line-height: 1.5em;
+    color: $gray-5;
+    vertical-align: middle;
+    background-color: $white;
+    border: 1px solid $gray-c;
+}
+
+
+
+
+/* Buttons Links--------*/
+/// usage $type: color || big || lite
+/// .btn { @include buttonLink(#25aae1,#51a0e5, big); }
+
+$Placeholder-Selectors: ();
+
+
+@mixin buttonLink ($primary-btn-clr, $secondary-btn-clr, $type, $extend: true) {
+      
+
+    @if ($type==color) {
+        @include buttonLink-static(false);
+        color: $white;
+        background-color: $primary-btn-clr;
+        border: 1px solid $secondary-btn-clr;
+        padding: 6px 12px 3px;
+        &:hover {
+            background-color: $secondary-btn-clr;
+        }
+
+      
+    }
+    
+
+    @else if ($type==lite) {
+        @include buttonLink-static(false);
+        &.lite {
+      
+            background: $white;
+            border: 1px solid $gray-e2;
+            color: $black;
+            i {
+                padding: 0 6px 0 0;
+            }
+            &:hover {
+                color: $primary-btn-clr;
+                background: $gray-ef;
+            }
+        }
+    }
+    
+    @else if ($type==big) {
+        @include buttonLink-static(false);
+        &.big {
+            background-color: $primary-btn-clr;
+            border: 1px solid $secondary-btn-clr;
+            color: $white;
+            padding: 8px 24px;
+            font-size: 20px;
+            margin: 6px 0;
+            
+            &:hover {
+                background-color: $secondary-btn-clr;
+            }
+        }
+    }
+
+
+}
+
+
+@mixin buttonLink-static( $extend: true) {
+    $button-selector: map-get($Placeholder-Selectors, 'buttonLink');
+
+    @if $extend == true {
+            @if $button-selector == null {
+                $button-selector: unique-id();
+                $Placeholder-Selectors: map-merge($Placeholder-Selectors, ('buttonLink': $button-selector)) !global;
+                
+                @at-root %#{$button-selector} {
+                    @include buttonLink-static(false);
+                }
+            }
+            @extend %#{$button-selector};
+            
+            }
+            @else {
+                
+                display: inline-block;
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 1.5em;
+                cursor: pointer;
+                
+                &:hover {
+                    text-decoration: none;
+                    cursor: pointer;
+                   
+                }
+                
+            }
+}
+
+.btn { @include buttonLink(#25aae1,#51a0e5, color); }

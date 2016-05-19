@@ -1,0 +1,54 @@
+// =====================================================================================================================================
+// site colors  
+// =====================================================================================================================================
+
+$gray-o          : #F1F1F1;
+$gray-black         : #2f2f2f; // top toolbar bkgrd
+
+$red-brick       : #be5300; //  em.labels 
+
+$navy-dkslate    : #0b3550; // a:hover
+$blue            : #208fde; // site main blue  links  icons
+$blue-powder     : #bedef5; // top toolbar icons
+$blue-dodger     : #1c8fda; // masthead gradient
+$blue-teal       : #015a95; // masthead gradient
+$blue-sky        : #8ec2e8; // masthead gradient
+$blue-flatNd     : #0280cc;
+
+$headlineClr     : #061826;
+$headlineBk      : #f7f7f7;
+
+
+$bodyClr : $gray-p;
+
+
+//newsday masthead gradient
+%newsdayGradientBlueBk {
+    background: $blue-dodger; /* Old browsers */
+    background: -moz-linear-gradient(top, $blue-dodger 0%, $blue-teal 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $blue-dodger), color-stop(100%, $blue-teal)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, $blue-dodger 0%, $blue-teal 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, $blue-dodger 0%, $blue-teal 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, $blue-dodger 0%, $blue-teal 100%); /* IE10+ */
+    background: linear-gradient(to bottom, $blue-dodger 0%, $blue-teal 100%); /* W3C */
+    filter: "progid: DXImageTransform.Microsoft.gradient( startColorstr='$dodgerblue', endColorstr='$blue-teal', GradientType=0)";
+}
+
+
+
+%mod {
+    background-color: #FFF;
+    border: 1px solid $gray-c;
+    margin: 8px 0 0 0;
+}
+
+
+%mod-top {
+    border-bottom: 1px solid $gray-c;
+    color: $black;
+    font-size: 18px;
+    margin-bottom: 0;
+    padding: 12px 10px;
+    font-weight: normal;
+    background: $gray-f7;
+}

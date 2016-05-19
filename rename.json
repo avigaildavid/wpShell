@@ -1,0 +1,5 @@
+{
+  "assets/js/scripts.js" : "assets/js/{%= js_file_name %}.js",
+  "assets/scss/styles.scss" : "assets/scss/{%= css_file_name %}.scss",
+  "temp/file_name.php" : "{%= temp/static_file_name %}.php"
+} 

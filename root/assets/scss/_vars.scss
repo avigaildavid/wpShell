@@ -1,0 +1,68 @@
+// =====================================================================================================================================
+// Colors, etc. 
+// =====================================================================================================================================
+
+$white            : #fff;
+$white-o          : #f9f9f9;
+
+$black            : #000;
+$black-off        : #333333;
+$black-offlt      : lighten($black-off , 45%); //#a6a6a6
+
+$gray-dkslate     : #3a3a39;
+$gray-c           : #CCC;
+$gray-9           : #999;
+$gray-txt         : #b2b2b2;
+$gray-p           : #4a4a4a; // text color for nd and n12
+$gray-e2          : #e2e2e2;
+$gray-ef          : #EFEFEF;
+$gray-5           : #555;
+$gray-devil       : #666;
+$gray-f5          : #f5f5f5;
+$gray-f6          : #f6f6f6;
+$gray-f7          : #f7f7f7;
+$gray-line        : #d5d5d6;
+
+$red-crit         : #cb0000;
+$red-error-color  : #a94442;
+$red-error-bg     : #f2dede;
+$red-error-border : #ebccd1;
+
+
+
+//social media colors
+$blue-fb          : #4463b1;
+$blue-tw          : #00aced;
+$red-pin          : #b8242a;
+$red-gp           : #da4935;
+$yellow-evn       : #ffb311;  
+$green-shr        : #32ae98;  
+$red-reddit       : #f00;     
+$blue-reddit      : #1f95d3; 
+$brown-stm        : #d55f3e; // stumbleupon
+
+
+// =====================================================================================================================================
+// Fonts etc. 
+// =====================================================================================================================================
+
+
+// common font stacks
+
+$times-new-roman : "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times           : Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia         : Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+$verdana         : Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma          : Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$helvetica       : Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$arial           : Arial, Helvetica, "Nimbus Sans L", sans-serif;
+
+$roboto          : "Roboto", "Arial Black", "Gadget", sans-serif;
+$robotoCondensed : "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+$openSans        : "Open Sans", "Arial", "Helvetica", sans-serif;
+$courier         : "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+
+// $font-body : $arial;
+// $font-headline : $arial;

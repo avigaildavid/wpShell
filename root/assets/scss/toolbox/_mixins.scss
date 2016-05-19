@@ -1,0 +1,192 @@
+
+// usage @include box-shadow();
+
+@mixin box-shadow($left:4px, $top:4px, $blur:10px, $spread:-1px, $color:#666, $inset:"") {
+      -webkit-box-shadow:$left $top $blur $spread $color #{$inset};
+      -moz-box-shadow:$left $top $blur $spread $color #{$inset};
+      box-shadow:$left $top $blur $spread $color #{$inset};
+}
+
+// =====================================================================================================================================
+
+// usage  @include links($grey, $hover: $blue, $underline: bool);
+
+@mixin links($normal, $hover: false, $underline:false) {
+        color: $normal;
+        text-decoration: none;
+    
+    @if $hover {
+        &:hover{
+            color: $hover;
+        }
+    }
+    @if $underline {
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+// =====================================================================================================================================
+
+// usage @include transitionIt(all,1s);
+
+@mixin transitionIt($prop, $secs) {
+    -webkit-transition: $prop $secs ease-in-out; -moz-transition: $prop $secs ease-in-out; -o-transition: $prop $secs ease-in-out; transition: $prop $secs ease-in-out;
+}
+
+
+$topbot: topbot; $all: all;
+@mixin border($where, $bord) {
+    border-style: solid; border-color: $bord;
+    @if $where== "topbot" { border-width: 1px 0 1px 0; }
+    @else { border-width: 1px; }
+}
+
+// =====================================================================================================================================
+
+// usage @include vertical-align(absolute);
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// =====================================================================================================================================
+// usage @include placeholder($white);
+@mixin placeholder($color) {
+    color: $color;
+    &::-webkit-input-placeholder {color: $color;}
+    /* Firefox 18- */
+    &:-moz-placeholder {color: $color;}
+    /* Firefox 19+ */
+    &::-moz-placeholder {color: $color;}
+    /* IE 10+ */
+    &:-ms-input-placeholder {color: $color;}
+    /* Edge */
+    &::-ms-input-placeholder {color: $color;}
+    /* Default Usage */
+    &:placeholder-shown {color: $color;}
+    
+    /*hide on focuse */
+    &:focus::-webkit-input-placeholder  {color:transparent;}
+    &:focus::-moz-placeholder   {color:transparent;}
+}
+
+//usage  select {@include msHideSelect(select);}
+@mixin msHideSelect ($attribute){
+    #{$attribute}::-ms-expand {display: none; }
+}
+
+
+// =====================================================================================================================================
+// usage @include word-wrap;
+@mixin word-wrap() {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+// usage @include ellipsis;
+@mixin ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+
+// =====================================================================================================================================
+// usage @include bgalpha('background-color', rgba(black, 0.5), white);
+@mixin bgalpha($attribute, $color, $background) {
+    $percent: alpha($color) * 100%;
+    $opaque: opacify($color, 1);
+    $solid-color: mix($opaque, $background, $percent);
+    #{$attribute}: $solid-color;
+    #{$attribute}: $color;
+}
+
+// =====================================================================================================================================
+
+@mixin wkscroll () {
+    -webkit-overflow-scrolling: touch;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+
+
+// =====================================================================================================================================
+
+
+/* Buttons Links--------*/
+/// usage $type: color || big || lite
+/// .btn { @include buttonLink(#25aae1,#51a0e5, big); }
+
+@mixin buttonLink ($primary-btn-clr, $secondary-btn-clr, $type) {
+    
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5em;
+    cursor: pointer;
+    
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+       
+    }
+    
+    @if ($type == color){
+      color: $white;
+      background-color:$primary-btn-clr;
+      border: 1px solid $secondary-btn-clr;
+      padding: 6px 12px 3px;
+      
+      &:hover {
+          background-color: $secondary-btn-clr;
+      }
+    }
+
+    @else if ($type == lite) {
+            &.lite {
+            background: $white;
+            border: 1px solid $gray-e2;
+            color: $black;
+            i { padding: 0 6px 0 0; }
+
+            &:hover {
+                color:$primary-btn-clr;
+                background: $gray-ef;
+            }
+        }
+    }
+    
+    @else if ($type == big) {
+        &.big {
+            padding: 8px 24px;
+            font-size: 20px;
+            margin: 6px 0;
+            background-color:$primary-btn-clr;
+            border: 1px solid $secondary-btn-clr;
+            &:hover {
+                background-color: $secondary-btn-clr;
+            }
+        }
+    }
+
+}
+
+
+// =====================================================================================================================================

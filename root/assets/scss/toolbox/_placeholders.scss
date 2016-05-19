@@ -1,0 +1,80 @@
+%blackFade {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+0,1+100 */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%); /* W3C */
+    filter: "progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0)"; /* IE6-9 */
+}
+
+%whiteFade {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&amp;0+0,1+100 */
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, white)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%); /* Opera 11.10+ */ 
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%); /* W3C */
+    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 )"; /* IE6-9 */
+}
+
+
+
+
+
+/* Blockly link layout used on error pages ---------*/
+/// usage  .blockly { @extend %blockly }
+
+
+%blockly {
+    font-family: $openSans ;
+    padding: 1px;
+    a {
+        position: relative;
+        float: left;
+        display: block;
+        width: 33.333%;
+        min-height: 200px;
+        margin: -1px 0 0 -1px;
+        padding: 22px;
+        background: $white;
+        color: $black;
+        border: 1px solid $black;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        
+        &:hover {
+            background: $black;
+            color: $white;
+            text-decoration: none;
+        }
+
+    } //a
+    
+    strong,
+    h3 {
+        font-size: 22px;
+        line-height: 1.1em;
+        letter-spacing: -0.5px;
+    }
+    em {
+        display: block;
+        font-style: normal;
+        padding-top: 6px;
+        font-size: 16px;
+        color: $gray-devil;
+    }
+    span {
+        position: absolute;
+        bottom: 12px;
+        left: 22px;
+        font-weight: 400px;
+        color: $gray-9;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+}

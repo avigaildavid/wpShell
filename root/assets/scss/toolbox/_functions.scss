@@ -1,0 +1,17 @@
+@mixin new($block) {
+  @at-root .#{$block} {
+    @content;
+  }
+}
+
+@mixin has($element) {
+  & #{$element} {
+    @content;
+  }
+}
+
+@mixin when($modifier) {
+  &#{$modifier} {
+    @content;
+  }
+}

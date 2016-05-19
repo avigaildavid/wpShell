@@ -1,0 +1,46 @@
+// =====================================================================================================================================
+// site colors  
+// =====================================================================================================================================
+
+$blue            : #25AAE1; // site main blue links and borders
+$blue-mid        : #0683ac; // filter hover
+$blue-cornflower : #43a9e1; // secrets find me btn selected
+
+$yellow          : #ffd306; // borders and selected btn nav
+$gold            : #fad700; // expand btn hover color secrets
+
+$white-smoke     : #f3f3f3;
+
+$gray-dim        : #5e646b; // footer
+$gray-df         : #dfdfdf; 
+$gray-db         : #dbdbdb; // mod borders
+
+$red             : #cf0b0b; //find me btn
+
+// Category Colors
+$landmarks: #f1b643;
+$culture: #cc4800;
+$sports: #0099cc;
+$outdoors: #499c06;
+$chic: #a008ae;
+$food: #bf2121;
+
+
+%mod {
+    border: 1px solid $gray-db;
+    background: $white;
+    position: relative;
+    margin-bottom: 22px;
+    border-bottom: 4px solid $blue;
+    height: 272px;
+    float: left;
+
+    h3 {
+        line-height: 1.1em;
+        font-size: 1.3em;
+        margin: 0
+    }
+}
+
+
+
